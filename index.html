@@ -9,12 +9,12 @@ body {
 }
 
 .centerPlace{
-    width: 100%;
+  width: 100%;
 	height:100%;
-    text-align:center;
+  text-align:center;
 	position: relative;
-	margin: auto;
-	line-height: 200px;
+	margin-top: 200px;
+	line-height: 100px;
 }
 
 .button {
@@ -34,8 +34,6 @@ body {
   background-color: White;
   color: skyblue;
 }
-
-
 </style>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
@@ -63,12 +61,12 @@ function showPosition(position) {
 <button class="button" onclick="javascript:getLocation();">Find My Location!</button>
 
 <form method="post" action="insert.php">
-	<label for="latitude">Lat:</label>
-	<input type="text" name="latitude" id="latitude" />
-	<label for="longitude">Long:</label>
-	<input type="text" name="longitude" id="longitude" />
+	<label for="latitude">latitude:</label>
+	<input type="text" name="latitude" id="latitude" /><br>
+	<label for="longitude">longitude:</label>
+	<input type="text" name="longitude" id="longitude" /><br>
 
-	<input class="button" type="submit" value="Send Location"/>
+	<input class="button" type="submit" value="Send Location"/><br>
 
 </form>
 </div>

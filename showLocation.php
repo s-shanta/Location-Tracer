@@ -29,8 +29,8 @@ mysqli_close($conn);
         <meta charset="utf-8">
         <style>          
           #map { 
-            height: 300px;    
-            width: 600px;            
+            height: 100%;    
+            width: 100%;            
           }          
         </style>        
     </head>    
@@ -43,28 +43,24 @@ mysqli_close($conn);
         var map;
         
         function initMap() {                            
-            var latitude = <?php echo $latt ?>; // YOUR LATITUDE VALUE
-            var longitude = <?php echo $lonn ?>; // YOUR LONGITUDE VALUE
+            var latitude = <?php echo $latt ?>; // LATITUDE VALUE
+            var longitude = <?php echo $lonn ?>; // LONGITUDE VALUE
             
             var myLatLng = {lat: latitude, lng: longitude};
             
             map = new google.maps.Map(document.getElementById('map'), {
               center: myLatLng,
-              zoom: 20                    
+              zoom: 10                    
             });
                     
             var marker = new google.maps.Marker({
               position: myLatLng,
               map: map,
-              //title: 'Hello World'
-              
-              // setting latitude & longitude as title of the marker
-              // title is shown when you hover over the marker
               title: latitude + ', ' + longitude 
             });            
         }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrG9qeAV7qjeprT1eZ8AxCWuZWMCFr_hs&callback=initMap"
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATT7AOsW5e6mYSaoV5Wk1JJlqKDzguv5U&callback=initMap"
         async defer></script>
     </body>    
 </html>
